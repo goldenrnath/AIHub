@@ -1,6 +1,6 @@
 Welcome to the AI Hub repository! This project hosts a website dedicated to exploring Artificial Intelligence tools, tutorials, news, and resources.
 
-🔗 Live Demo: https://yourusername.github.io (Replace with your GitHub Pages URL or custom domain)
+🔗 Live Demo:https://github.com/goldenrnath/AIHub (Replace with your GitHub Pages URL or custom domain)
 
 🚀 Features
 AI Tools Directory (ChatGPT, Gemini, Midjourney, Claude, etc.)
