@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Hub</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16zm-1-10h2v6h-2zm1-2a1 1 0 1 0 0-2 1 1 0 0 0 0 2z'/></svg>">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container search-container" id="searchPage">
+        <h1>AI Hub - Search</h1>
+        <input type="text" id="searchQuery" placeholder="Ask anything...">
+        <button onclick="performSearch()">Search</button>
+        <div id="results"></div>
+    </div>
+
+    <div class="container login-container" id="loginPage" style="display: none;">
+        <h1>AI Hub - Login</h1>
+        <div class="form-group">
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button onclick="login()">Login</button>
+            <button onclick="signup()">Sign Up</button>
+        </div>
+    </div>
+
+    <div class="container ai-container" id="aiSelectionPage" style="display: none;">
+        <h1>AI Hub - Select AIs</h1>
+        <div class="ai-list" id="aiList"></div>
+        <label><input type="checkbox" id="loginRequiredToggle" onchange="filterAIs('login')"> Show Login Required Only</label>
+        <label><input type="checkbox" id="noLoginToggle" onchange="filterAIs('no-login')"> No Login Required</label>
+        <button onclick="goToSearch()">Search with Selected</button>
+    </div>
+
+    <div class="modal" id="loginModal" style="display: none;">
+        <div class="modal-content">
+            <h2>Login to <span id="aiName"></span></h2>
+            <input type="text" id="aiEmail" placeholder="Email or API Key">
+            <input type="password" id="aiPassword" placeholder="Password">
+            <button onclick="saveAICredentials()">Save</button>
+            <button onclick="closeModal()">Cancel</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
